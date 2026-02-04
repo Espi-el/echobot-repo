@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.envrc
+.idea/
+.vscode/
+*.log
+echo-deployer-key.json
