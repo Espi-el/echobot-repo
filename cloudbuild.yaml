@@ -23,7 +23,7 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 images:
-- 'northamerica-northeast2.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA'
+- 'northamerica-northeast2-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA'
 substitutions:
   _REGION: "northamerica-northeast2"
 timeout: '1200s'
