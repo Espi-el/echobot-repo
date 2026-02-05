@@ -20,6 +20,8 @@ steps:
   - --min-instances=1
   - --memory=512Mi
   - --concurrency=80
+options:
+  logging: CLOUD_LOGGING_ONLY
 images:
 - 'us-central1-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA'
 substitutions:
