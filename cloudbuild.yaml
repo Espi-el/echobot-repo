@@ -16,7 +16,7 @@ steps:
   - --region=northamerica-northeast2
   - --platform=managed
   - --service-account=echo-deployer@echobot-486304.iam.gserviceaccount.com
-  - --set-secrets=SLACK_BOT_TOKEN=projects/echobot-486304/secrets/slack-bot-token:latest,SLACK_SIGNING_SECRET=projects/echobot-486304/secrets/slack-signing-secret:latest
+  - --set-secrets=SLACK_BOT_TOKEN=projects/914835758459/secrets/slack-bot-token:latest,SLACK_SIGNING_SECRET=projects/914835758459/secrets/slack-signing-secret:latest
   - --min-instances=1
   - --memory=512Mi
   - --concurrency=80
