@@ -1,0 +1,9 @@
+steps:
+- id: "noop"
+  name: "gcr.io/google.com/cloudsdktool/cloud-sdk:slim"
+  entrypoint: "bash"
+  args:
+  - "-c"
+  - "echo 'noop build to create Cloud Build service account'"
+
+timeout: "120s"
