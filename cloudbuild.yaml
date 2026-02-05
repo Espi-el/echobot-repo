@@ -1,10 +1,10 @@
 steps:
 - id: Build
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA', './services/echobot']
+  args: ['build', '-t', 'northamerica-northeast2-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA', './services/echobot']
 - id: Push
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA']
+  args: ['push', 'northamerica-northeast2-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA']
 - id: Deploy
   name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
   entrypoint: gcloud
@@ -12,8 +12,8 @@ steps:
   - run
   - deploy
   - echobot
-  - --image=us-central1-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA
-  - --region=us-central1
+  - --image=northamerica-northeast2-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA
+  - --region=northamerica-northeast2
   - --platform=managed
   - --service-account=echo-deployer@echobot-486304.iam.gserviceaccount.com
   - --set-secrets=SLACK_BOT_TOKEN=projects/echobot-486304/secrets/slack-bot-token:latest,SLACK_SIGNING_SECRET=projects/echobot-486304/secrets/slack-signing-secret:latest
@@ -23,7 +23,7 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 images:
-- 'us-central1-docker.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA'
+- 'northamerica-northeast2.pkg.dev/echobot-486304/echobot-repo/echobot:$SHORT_SHA'
 substitutions:
-  _REGION: "us-central1"
+  _REGION: "northamerica-northeast2"
 timeout: '1200s'
